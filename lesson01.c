@@ -1,10 +1,10 @@
 #include <stdio.h>
 
 int main() {
-    int stock;
-    int in[101];
-    int out[101];
-    int nam[101];
+    int stock;//상품개수
+    int in[101];//입고
+    int out[101];//출고
+    int nam[101];//남은재고
     int id;
 
     scanf("%d", &stock);
@@ -29,3 +29,4 @@ int main() {
 
     return 0;
 }
+
