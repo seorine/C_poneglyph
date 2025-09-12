@@ -1,17 +1,20 @@
 #include <stdio.h>
 
 int main() {
-    int stock;//상품개수
-    int in[101];//입고
-    int out[101];//출고
-    int nam[101];//남은재고
+    int stock;//상품 개수
     int id;
+    int in[100]; //입고
+    int out[100];//출고
+    int nam[100];//남은 재고
 
+    printf("상품 개수: ");
     scanf("%d", &stock);
 
+    printf("상품별 입고 수량: ");
     for (int i = 0; i < stock; i++) {
         scanf("%d", &in[i]);
     }
+    printf("상품별 판매 수량: ");
     for (int i = 0; i < stock; i++) {
         scanf("%d", &out[i]);
     }
@@ -19,14 +22,14 @@ int main() {
         nam[i] = in[i] - out[i];
     }
 
+    printf("상품 ID: ");
     scanf("%d", &id);
 
-    printf("");
+    printf("%d\n", nam[id - 1]);
     for (int i = 0; i < stock; i++) {
         printf("%d ", nam[i]);
+        printf(" ");
     }
     printf("\n");
-
     return 0;
 }
-
