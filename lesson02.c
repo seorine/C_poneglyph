@@ -9,8 +9,8 @@ int main() {
     int max;//가장 많이 판매된 상품
     int min;//가장 적게 판매된 상품
     int minid, maxid=0;//가장적게많이 판매된 상품과 id
-    int totalin=0;
-    int totalout=0;
+    int totalin=0;//총입고
+    int totalout=0;//총판매
     
 
     printf("상품 개수: ");
@@ -63,3 +63,4 @@ int main() {
     printf("\n");
     return 0;
 }
+
