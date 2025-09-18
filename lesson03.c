@@ -75,8 +75,8 @@ int main() {
                 printf("총판매량: %d (판매율 %.2f%%)\n", totalout, rate);
             }
 
-            int max = out[0], min = out[0];
-            int maxId = 0, minId = 0;
+            int max = out[0], min = out[0];  //최다판매량, 최소판매량
+            int maxId = 0, minId = 0;  //최다, 최소판매량 Id
 
             for (int i = 1; i < stock; i++) {
                 if (out[i] > max) {
