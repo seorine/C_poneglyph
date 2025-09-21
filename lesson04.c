@@ -65,9 +65,9 @@ int main() {
         }
         else if (menu == 3) {  // === 상품 현황 출력 ===
             printf("\n[상품 현황]\n");
-            printf("ID\t입고\t판매\t재고\n");
+            printf("ID\t상품이름\t입고\t판매\t재고\n");
             for (int i = 0; i < stock; i++) {
-                printf("%d\t%d\t%d\t%d\n", i, in[i], out[i], nam[i]);
+                printf("%d\t%s\t%d\t%d\t%d\n", i, stockName[i], in[i], out[i], nam[i]);
             }
 
             if (totalin > 0) {
@@ -115,5 +115,3 @@ int main() {
 
     return 0;
 }
-
-   
