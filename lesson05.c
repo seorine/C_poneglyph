@@ -12,7 +12,7 @@ char stockName[MAX][50] = {0}; // 상품명 저장
 
 int totalin = 0, totalout = 0; // 총 입고, 총 판매
 
-// 함수 원형 선언
+
 int commandMenu(void);       // 메뉴 출력 및 선택
 void stockIn();              // 입고 처리
 void stockOut();             // 판매 처리
@@ -22,12 +22,10 @@ void inputProductNames(void);// 상품명 입력
 
 // 메인 함수
 int main(void) {
-    // 프로그램 시작 시 상품 개수 입력
     printf("상품 개수 입력: ");
     scanf("%d", &stock);
 
     while (1) {
-        // 메뉴 호출 → 사용자가 선택한 번호 반환
         int menu = commandMenu();
 
         if (menu == 1) {           // 입고
