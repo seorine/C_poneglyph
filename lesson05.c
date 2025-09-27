@@ -70,7 +70,7 @@ int commandMenu(void){
 
 
 // 상품 입고 함수
-void stockIn(){
+void stockIn(void){
     int sub, id, qty;
     printf("입고수량 입력: 전체 1, 개별 2 선택 > ");
     scanf("%d", &sub);
@@ -97,7 +97,7 @@ void stockIn(){
 
 
 // 상품 판매 함수
-void stockOut(){
+void stockOut(void){
     int sub, id, qty;
     printf("판매수량 입력: 전체 1, 개별 2 선택 > ");
     scanf("%d", &sub);
