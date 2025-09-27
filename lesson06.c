@@ -132,7 +132,7 @@ void pronaw(void){
 
     // 상품별 현황 출력
     for (int i = 0; i < stock; i++) {
-        printf("%d\t%s\t%d\t%d\t%d\n", i, stockName[i], in[i], out[i], nam[i]);
+        printf("%d\t%s\t\t%d\t%d\t%d\n", i, stockName[i], in[i], out[i], nam[i]);
     }
 
     // 총 판매율 계산 (총 판매량 / 총 입고량)
@@ -181,7 +181,7 @@ void pronawone(void) {
     scanf("%d", &target);
     if (target >= 0 && target < stock) {
         printf("ID\t상품이름\t입고\t판매\t재고\n");
-        printf("%d\t%s\t%d\t%d\t%d\n",
+        printf("%d\t%s\t        %d\t %d\t%d\n",
                target, stockName[target], in[target], out[target], nam[target]);
     } else {
         printf("잘못된 ID 입니다!\n");
