@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <string.h>
-
 #define MAX 100   // 최대 상품 개수
 
 // 전역 변수 (상품 관련 데이터 저장)
