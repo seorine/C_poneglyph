@@ -147,10 +147,16 @@ void pronawone(void){
     int t;
     printf("상품 ID 입력(1~%d) > ",stock);
     if(scanf("%d",&t)!=1) return;
-    if(t>=1 && t<=stock)
-        printf("ID\t상품이름\t입고\t판매\t재고\n%d\t%s\t%d\t%d\t%d\n",t,stockName[t],in[t],out[t],nam[t]);
+
+    if(t>=1 && t<=stock){
+        // 헤더 부분을 폭 지정해 정렬, 왼쪽정렬
+        printf("%-5s %-15s %-8s %-8s %-8s\n","ID","상품이름","입고","판매","재고");
+        // 데이터 부분도 폭 지정해 맞춤 출력
+        printf("%-5d %-15s %-8d %-8d %-8d\n",t,stockName[t],in[t],out[t],nam[t]);
+    }
     else printf("잘못된 ID!\n");
 }
+
 
 // ---------------- 데이터 파일 저장 ---------------- //
 // 현재 재고 데이터와 총입고/총판매 수를 파일에 저장
