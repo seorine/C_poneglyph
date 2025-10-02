@@ -254,9 +254,9 @@ int carlsen(void) {
 
     // 각 라인 읽기
     for (int i = 1; i <= stock; i++) {
-        int id, vin, vout, vnam;
+        int id, chessIn, chessOut, chessNam;   // ← 이름 변경
         char name[50];
-        if (fscanf(fp, "%d %49s %d %d %d", &id, name, &vin, &vout, &vnam) != 5) {
+        if (fscanf(fp, "%d %49s %d %d %d", &id, name, &chessIn, &chessOut, &chessNam) != 5) {
             printf("파일 형식 오류: %d번째 상품 정보를 읽을 수 없습니다.\n", i);
             fclose(fp);
             return 0;
@@ -268,9 +268,9 @@ int carlsen(void) {
         }
         strncpy(stockName[id], name, 49);
         stockName[id][49] = '\0';
-        in[id]  = vin;
-        out[id] = vout;
-        nam[id] = vnam;
+        in[id]  = chessIn;   // ← 이름 변경 반영
+        out[id] = chessOut;
+        nam[id] = chessNam;
     }
 
     fclose(fp);
