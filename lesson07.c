@@ -149,7 +149,7 @@ void pronawone(void){
     if(scanf("%d",&t)!=1) return;
 
     if(t>=1 && t<=stock){
-        // 헤더 부분을 폭 지정해 정렬, 왼쪽정렬
+        // 왼쪽정렬
         printf("%-5s %-15s %-8s %-8s %-8s\n","ID","상품이름","입고","판매","재고");
         // 데이터 부분도 폭 지정해 맞춤 출력
         printf("%-5d %-15s %-8d %-8d %-8d\n",t,stockName[t],in[t],out[t],nam[t]);
