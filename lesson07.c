@@ -138,7 +138,7 @@ void pronaw(void){
 
     // 재고 부족 경고
     for(int i=1;i<=stock;i++) if(nam[i]<=2)
-        printf("※ 재고부족: ID %d (%s) 남은 %d개\n",i,stockName[i],nam[i]);
+        printf("※ 재고부족: ID %d (%s) 남은재고 %d개\n",i,stockName[i],nam[i]); //2025_10_05수정
 }
 
 // ---------------- 개별 현황 출력 ---------------- //
