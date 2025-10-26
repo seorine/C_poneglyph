@@ -13,21 +13,21 @@ typedef struct {
     char stockName[MAX][50];    // 상품명
     int totalin;                // 총 입고량
     int totalout;               // 총 판매량
-} Sicilian_Hyper_Accelerated_Dragon;
+} Inventory;
 
 // ---------------- 함수 선언 ---------------- //
 int  commandMenu(void);
-void inputProductNames(Sicilian_Hyper_Accelerated_Dragon *p);
-void stockIn(Sicilian_Hyper_Accelerated_Dragon *p);
-void stockOut(Sicilian_Hyper_Accelerated_Dragon *p);
-void pronaw(Sicilian_Hyper_Accelerated_Dragon *p);
-void pronawone(Sicilian_Hyper_Accelerated_Dragon *p);
-int  hikaru(Sicilian_Hyper_Accelerated_Dragon *p);
-int  carlsen(Sicilian_Hyper_Accelerated_Dragon *p);
+void inputProductNames(Inventory *p);
+void stockIn(Inventory *p);
+void stockOut(Inventory *p);
+void pronaw(Inventory *p);
+void pronawone(Inventory *p);
+int  hikaru(Inventory *p);
+int  carlsen(Inventory *p);
 
 // ---------------- 메인 ---------------- //
 int main(void) {
-    Sicilian_Hyper_Accelerated_Dragon s = {0};
+    Inventory s = {0};
     s.stock = MAX_STOCK;
 
     inputProductNames(&s);
@@ -59,7 +59,7 @@ int commandMenu(void){
 }
 
 // ---------------- 상품명 입력 ---------------- //
-void inputProductNames(Sicilian_Hyper_Accelerated_Dragon *p){
+void inputProductNames(Inventory *p){
     printf("\n[상품명 입력] (총 %d개, ID 1~%d)\n", p->stock, p->stock);
     for (int i = 1; i <= p->stock; i++) {
         printf("ID%d 상품명: ", i);
@@ -68,7 +68,7 @@ void inputProductNames(Sicilian_Hyper_Accelerated_Dragon *p){
 }
 
 // ---------------- 입고 처리 ---------------- //
-void stockIn(Sicilian_Hyper_Accelerated_Dragon *p){
+void stockIn(Inventory *p){
     int sub, id, qty;
     printf("입고수량 입력: 전체 1, 개별 2 선택 > ");
     if (scanf("%d", &sub) != 1) return;
@@ -95,7 +95,7 @@ void stockIn(Sicilian_Hyper_Accelerated_Dragon *p){
 }
 
 // ---------------- 판매 처리 ---------------- //
-void stockOut(Sicilian_Hyper_Accelerated_Dragon *p){
+void stockOut(Inventory *p){
     int sub, id, qty;
     printf("판매수량 입력: 전체 1, 개별 2 선택 > ");
     if (scanf("%d", &sub) != 1) return;
@@ -124,7 +124,7 @@ void stockOut(Sicilian_Hyper_Accelerated_Dragon *p){
 }
 
 // ---------------- 전체 현황 출력 ---------------- //
-void pronaw(Sicilian_Hyper_Accelerated_Dragon *p){
+void pronaw(Inventory *p){
     printf("\n[상품 현황]\n");
     printf("ID  %-12s %6s %6s %6s\n", "상품이름", "입고", "판매", "재고");
     for (int i = 1; i <= p->stock; i++)
@@ -149,7 +149,7 @@ void pronaw(Sicilian_Hyper_Accelerated_Dragon *p){
 }
 
 // ---------------- 개별 현황 ---------------- //
-void pronawone(Sicilian_Hyper_Accelerated_Dragon *p){
+void pronawone(Inventory *p){
     int t;
     printf("상품 ID 입력(1~%d) > ", p->stock);
     if (scanf("%d", &t) != 1) return;
@@ -159,7 +159,7 @@ void pronawone(Sicilian_Hyper_Accelerated_Dragon *p){
 }
 
 // ---------------- 저장 ---------------- //
-int hikaru(Sicilian_Hyper_Accelerated_Dragon *p){
+int hikaru(Inventory *p){
     char fn[256];
     printf("저장할 파일명: ");
     if (scanf("%255s", fn) != 1) return 0;
@@ -175,7 +175,7 @@ int hikaru(Sicilian_Hyper_Accelerated_Dragon *p){
 }
 
 // ---------------- 불러오기 ---------------- //
-int carlsen(Sicilian_Hyper_Accelerated_Dragon *p){
+int carlsen(Inventory *p){
     char fn[256];
     printf("불러올 파일명: ");
     if (scanf("%255s", fn) != 1) return 0;
